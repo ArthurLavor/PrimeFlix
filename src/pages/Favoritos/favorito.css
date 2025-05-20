@@ -1,24 +1,24 @@
-
-.meus-filmes{
+.meus-filmes {
     margin-top: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.meus-filmes h1{
+.meus-filmes h1 {
     margin-bottom: 14px;
 }
 
-.meus-filmes span{
+.meus-filmes span {
     font-size: 18px;
 }
 
-.meus-filmes ul{
-    width: 720px;
+.meus-filmes ul {
+    width: 100%;
+    max-width: 720px; /* Ajuste para telas menores */
 }
 
-.meus-filmes ul li{
+.meus-filmes ul li {
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -26,7 +26,7 @@
     margin-bottom: 14px;
 }
 
-.meus-filmes div{
+.meus-filmes div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,4 +36,20 @@
     text-decoration: none;
     color: #116fed;
     margin-right: 14px;
+}
+
+/* Ajuste para melhor usabilidade em Android */
+@media (max-width: 768px) {
+    .meus-filmes ul {
+        width: 90%; /* Mantém uma largura responsiva */
+    }
+
+    .meus-filmes span {
+        font-size: 16px; /* Ajuste para telas menores */
+    }
+
+    .meus-filmes ul li {
+        flex-direction: column; /* Melhor organização em telas pequenas */
+        align-items: flex-start;
+    }
 }
